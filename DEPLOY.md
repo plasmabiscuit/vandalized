@@ -85,6 +85,97 @@ docker compose up -d redis mongo chromadb
 
 ---
 
+## Institution Customization
+
+This section covers the information you need to gather before deploying Vandalizer at a new institution.
+
+### Checklist: What to Gather
+
+Before deploying for your institution, collect the following:
+
+| Item | Where Used | How to Configure |
+|------|-----------|-----------------|
+| **Institution name** | Certification credentials, UI labels | `VITE_INSTITUTION_NAME` frontend env var |
+| **Certification credential name** | Certification module UI and certificates | `VITE_CERTIFICATION_NAME` frontend env var |
+| **Azure AD tenant ID** | SSO login | Admin UI → System Config → OAuth |
+| **Azure AD client ID** | SSO login | Admin UI → System Config → OAuth |
+| **Azure AD client secret** | SSO login | Admin UI → System Config → OAuth |
+| **SSO button label** (e.g., "Sign in with [Institution] SSO") | Login page | Admin UI → System Config → OAuth → label |
+| **LLM API key(s)** | AI extraction, chat, workflows | Admin UI → System Config → Models |
+| **LLM endpoint URL(s)** | AI extraction, chat, workflows | Admin UI → System Config → Models |
+| **OCR endpoint URL** (optional) | Scanned PDF processing | Admin UI → System Config → Endpoints |
+| **SMTP server details** | Email notifications | `backend/.env` → `SMTP_*` variables |
+| **Public URL** | CORS, OAuth redirects, Teams links | `backend/.env` → `FRONTEND_URL`; root `.env` → `VANDALIZER_BASE_URL` |
+| **Research admin policy URLs** | Institutional knowledge base | Replace `backend/seeds/knowledge_bases/ui_sponsored_programs.json` |
+| **Mascot / wordmark images** | App header and landing page | Replace image files in `frontend/public/images/` |
+| **Sample training documents** | Certification exercises | Replace files in `backend/certification-data/` |
+
+### Frontend Environment Variables
+
+Create `frontend/.env.local` with your institution's values:
+
+```env
+# Institution name displayed on certification credentials
+VITE_INSTITUTION_NAME=Acme University
+
+# Name of the certification credential
+VITE_CERTIFICATION_NAME=Acme Workflow Architect
+```
+
+These values default to "University of Idaho" and "Vandal Workflow Architect" when not set.
+
+### SSO / Azure AD
+
+Vandalizer supports Azure Active Directory (Entra ID) for single sign-on. To configure it for your institution:
+
+1. Register an application in your institution's Azure AD tenant.
+2. Set the redirect URI to `https://<your-domain>/api/auth/oauth/azure/callback`.
+3. In the admin UI, navigate to **System Config → Authentication** and add an OAuth provider with:
+   - **Provider**: `azure`
+   - **Tenant ID**: your Azure AD tenant ID
+   - **Client ID**: the application (client) ID from Azure
+   - **Client Secret**: a client secret from Azure
+   - **Label**: the button text shown on the login page (e.g., "Sign in with Acme SSO")
+4. Enable the `oauth` auth method under **System Config → Authentication**.
+
+### Institutional Knowledge Base
+
+The file `backend/seeds/knowledge_bases/ui_sponsored_programs.json` contains a pre-built knowledge base of University of Idaho research administration policy URLs. To replace it with your institution's policies:
+
+1. Create a new JSON file in the same format (see the existing file for structure).
+2. Populate it with URLs and descriptions for your institution's research administration policies, forms, and procedures.
+3. Re-run the seed command or import the knowledge base through the admin UI.
+
+### Branding and Images
+
+All images are served from `frontend/public/images/`. Replace the following files to rebrand for your institution:
+
+| File | Description |
+|------|-------------|
+| `joevandal.png` | Mascot image in the app header |
+| `Vandalizer_Wordmark_Color_RGB+W.png` | Color wordmark (used on dark backgrounds) |
+| `Vandalizer_Wordmark_RGB.png` | Wordmark used in the main header |
+
+Keep the same file names, or update the references in `frontend/src/components/layout/Header.tsx` and `frontend/src/pages/Landing.tsx`.
+
+### Certification Training Content
+
+The `backend/certification-data/` directory contains sample documents and exercise definitions used by the certification module:
+
+| File/Directory | Description |
+|----------------|-------------|
+| `documents/` | Sample PDF documents (NSF proposals, subaward agreements, budget justifications) used in hands-on exercises |
+| `exercises.json` | Exercise definitions: per-module instructions, expected extraction fields, and star criteria |
+| `generate_pdfs.py` | Script that regenerated the sample PDFs; useful as a reference when creating new samples |
+
+To customize for your institution:
+
+1. **Replace the sample documents** in `documents/` with PDFs relevant to your institution's research administration context (e.g., your institution's template proposal, budget form, or subaward agreement).
+2. **Update `exercises.json`** — the `documents` array in each module entry lists the filenames that are pre-loaded for that exercise. Update these filenames to match your replacement documents. The `expected_fields` and `expected_values` entries specify what the certification validator checks for; update them to match what your sample documents contain.
+3. **No code changes are required** after updating these files — the backend reads them at runtime.
+
+---
+
 ## Production Deployment
 
 This section covers what you need to know when deploying Vandalizer for real users in a university environment.

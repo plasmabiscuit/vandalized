@@ -23,6 +23,9 @@ import { useQueryClient } from '@tanstack/react-query'
 import { JourneyMap } from '../components/certification/JourneyMap'
 import { LEVEL_CONFIG, LEVEL_THRESHOLDS, TOTAL_XP, TIERS } from '../components/certification/constants'
 
+const INSTITUTION_NAME = import.meta.env.VITE_INSTITUTION_NAME || 'University of Idaho'
+const CERTIFICATION_NAME = import.meta.env.VITE_CERTIFICATION_NAME || 'Vandal Workflow Architect'
+
 // ---------------------------------------------------------------------------
 // Module definitions
 // ---------------------------------------------------------------------------
@@ -957,7 +960,7 @@ export default function Certification() {
             {/* Stats */}
             <div className="flex-1 w-full">
               <h1 className="text-2xl font-bold text-gray-900 mb-1">
-                Vandal Workflow Architect
+                {CERTIFICATION_NAME}
               </h1>
               <p className="text-sm text-gray-500 mb-2">
                 Complete all 11 modules to earn your official certification
@@ -968,7 +971,7 @@ export default function Certification() {
               >
                 <Award size={16} className="text-yellow-600 shrink-0" />
                 <p className="text-xs text-yellow-800">
-                  <span className="font-bold">Vandal Workflow Architect (VWA)</span> — a University of Idaho credential recognizing your ability to design, build, and deploy AI-powered document workflows for research administration.
+                  <span className="font-bold">{CERTIFICATION_NAME}</span> — a {INSTITUTION_NAME} credential recognizing your ability to design, build, and deploy AI-powered document workflows for research administration.
                 </p>
               </div>
 

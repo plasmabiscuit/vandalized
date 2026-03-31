@@ -432,7 +432,7 @@ async def auth_config():
         providers.append(
             {
                 "provider": "azure",
-                "display_name": azure.get("label", "Sign in with U of I")
+                "display_name": azure.get("label", "Sign in with SSO")
                 if azure
                 else "Azure SSO",
                 "configured": azure is not None,

@@ -2,6 +2,9 @@ import { Award, Sparkles, Star, Zap } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import type { CompletionResult } from '../../types/certification'
 
+const INSTITUTION_NAME = import.meta.env.VITE_INSTITUTION_NAME || 'University of Idaho'
+const CERTIFICATION_NAME = import.meta.env.VITE_CERTIFICATION_NAME || 'Vandal Workflow Architect'
+
 const LEVEL_CONFIG: Record<string, { label: string; color: string }> = {
   novice:     { label: 'Novice',     color: '#9ca3af' },
   apprentice: { label: 'Apprentice', color: '#60a5fa' },
@@ -79,10 +82,10 @@ export function CelebrationOverlay({
               <Award size={48} className="text-white" />
             </div>
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
-              University of Idaho
+              {INSTITUTION_NAME}
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-1 title-shimmer">
-              Vandal Workflow Architect
+              {CERTIFICATION_NAME}
             </h2>
             <p className="text-sm font-semibold mb-3" style={{ color: 'var(--highlight-color)' }}>
               Certified Professional

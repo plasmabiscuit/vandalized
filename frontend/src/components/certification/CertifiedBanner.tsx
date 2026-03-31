@@ -1,5 +1,8 @@
 import { Award } from 'lucide-react'
 
+const INSTITUTION_NAME = import.meta.env.VITE_INSTITUTION_NAME || 'University of Idaho'
+const CERTIFICATION_NAME = import.meta.env.VITE_CERTIFICATION_NAME || 'Vandal Workflow Architect'
+
 export function CertifiedBanner() {
   return (
     <div
@@ -17,10 +20,10 @@ export function CertifiedBanner() {
           <Award size={32} className="text-yellow-400" />
           <div>
             <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-0.5">
-              University of Idaho &middot; Certified
+              {INSTITUTION_NAME} &middot; Certified
             </p>
             <h2 className="text-2xl font-bold text-white title-shimmer">
-              Vandal Workflow Architect
+              {CERTIFICATION_NAME}
             </h2>
           </div>
           <Award size={32} className="text-yellow-400" />
