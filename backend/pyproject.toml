@@ -1,7 +1,7 @@
 [project]
 name = "vandalizer-next-backend"
 version = "0.1.0"
-description = "Vandalizer Next - FastAPI backend"
+description = "Awesome.ai - FastAPI backend"
 requires-python = ">=3.11,<3.13"
 dependencies = [
     "fastapi>=0.115,<1",

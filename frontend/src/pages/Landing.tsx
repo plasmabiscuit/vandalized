@@ -373,13 +373,13 @@ export default function Landing() {
           {/* Logo */}
           <img
             src="/images/Vandalizer_Wordmark_Color_RGB+W.png"
-            alt="Vandalizer"
+            alt="Awesome.ai"
             className="w-full max-w-[500px] mb-5"
           />
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-            AI-powered knowledge extraction, built at the University of Idaho.
+            AI-powered knowledge extraction, built at Tennessee Tech.
           </p>
 
           {/* Demo CTA */}
@@ -840,12 +840,12 @@ export default function Landing() {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Born at the University of Idaho
+            Born at Tennessee Tech
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed mb-12">
-            Vandalizer is an open-source initiative developed by the{' '}
-            <strong>Artificial Intelligence for Research Administration (AI4RA)</strong> team at the
-            University of Idaho.
+            Awesome.ai is an open-source initiative developed by the{' '}
+            <strong>Artificial Intelligence for Research Administration (AI4RA)</strong> team at
+            Tennessee Tech.
             <br />
             <br />
             This project is made possible through the support of the{' '}
@@ -858,7 +858,7 @@ export default function Landing() {
           <div className="flex flex-wrap justify-center gap-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
             <div className="h-20 px-8 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors">
               <span className="text-2xl font-bold text-[#f1b300] tracking-wider">
-                University of Idaho
+                Tennessee Tech
               </span>
             </div>
             <div className="h-20 px-8 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors">

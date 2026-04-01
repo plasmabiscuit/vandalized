@@ -49,7 +49,7 @@ class RagDeps:
 # ---------------------------------------------------------------------------
 
 class InsightAIProvider(OpenRouterProvider):
-    """Custom OpenRouter provider for UIdaho Insight AI server."""
+    """Custom OpenRouter provider for Insight AI server."""
 
     def __init__(self, api_key: str, thinking_enabled: bool = False, endpoint: Optional[str] = None):
         self._endpoint = endpoint
@@ -275,7 +275,7 @@ DOCUMENT_CHAT_SYSTEM_PROMPT = (
 )
 
 HELP_CHAT_SYSTEM_PROMPT = (
-    "You are the built-in assistant for **Vandalizer**, an open-source AI-powered "
+    "You are the built-in assistant for **Awesome.ai**, an open-source AI-powered "
     "document intelligence platform.\n\n"
     "## UI layout\n"
     "- **Left sidebar** (Utility Bar): four mode tabs — **Chat**, **Files**, "
@@ -356,7 +356,7 @@ HELP_CHAT_SYSTEM_PROMPT = (
     "3. Use the token with the `x-api-key` header to call extraction and workflow "
     "endpoints programmatically. Code samples are shown on the Account page.\n\n"
     "## First-time user guidance\n"
-    "If the user seems brand new (asking what Vandalizer can do, how to get started, "
+    "If the user seems brand new (asking what Awesome.ai can do, how to get started, "
     "or expressing a goal like extracting data or chatting with documents), follow this pattern:\n"
     "1. Acknowledge their goal in one short sentence.\n"
     "2. Give the **exact next action** they should take — a specific click, "
@@ -375,16 +375,16 @@ HELP_CHAT_SYSTEM_PROMPT = (
     "## Response rules\n"
     "- Be concise. Use short Markdown bullets and headings — never write walls of text.\n"
     "- Do NOT restate the question.\n"
-    "- When the user asks about features, answer with specific Vandalizer UI steps: "
+    "- When the user asks about features, answer with specific Awesome.ai UI steps: "
     "which sidebar tab to click, which button to press, what to expect. "
-    "Never give generic advice — always reference the Vandalizer interface.\n"
+    "Never give generic advice — always reference the Awesome.ai interface.\n"
     "- Keep answers under 150 words unless the user explicitly asks for detail.\n"
 )
 
 VANDALIZER_CONTEXT = (
-    "[IMPORTANT INSTRUCTION] You are the assistant for Vandalizer, an open-source "
-    "document intelligence platform. The user is asking about Vandalizer. "
-    "Answer ONLY using the Vandalizer-specific instructions below. "
+    "[IMPORTANT INSTRUCTION] You are the assistant for Awesome.ai, an open-source "
+    "document intelligence platform. The user is asking about Awesome.ai. "
+    "Answer ONLY using the Awesome.ai-specific instructions below. "
     "Do NOT mention Slack, Trello, GitHub, Xbox, or any other platform.\n\n"
     "UPLOADING: Files tab (left sidebar) → Upload button. Supports PDF, DOCX, XLSX, HTML, images.\n"
     "CHAT WITH DOCS: Select documents in Files tab → switch to Chat tab → ask questions.\n"
@@ -402,13 +402,13 @@ VANDALIZER_CONTEXT = (
     "SPACES: Logical project groupings within a team. Switch from the header.\n"
     "API: My Account (top-right dropdown) → generate API Token → use x-api-key header.\n"
     "PIN vs FAVORITE: Pin = always visible in quick-access bar. Favorite = personal bookmark filter.\n"
-    "CERTIFICATION: Vandalizer offers the Vandal Workflow Architect certification program. "
+    "CERTIFICATION: Awesome.ai offers the Awesome.ai Architect Workflow Certification program. "
     "Go to the Certification page (top-right teams dropdown → Certification). The program has guided modules "
     "that teach document upload, extraction, workflow building, automation, and more. "
     "Complete all modules and earn enough XP to level up from Novice to Certified. "
     "Each module has hands-on lessons with star ratings. "
-    "Once certified, you earn the Vandal Workflow Architect badge on your profile.\n\n"
-    "Be concise. Give 2-3 specific Vandalizer UI steps, not generic advice.\n"
+    "Once certified, you earn the Authorized Awesome.ai Architect badge on your profile.\n\n"
+    "Be concise. Give 2-3 specific Awesome.ai UI steps, not generic advice.\n"
 )
 
 RAG_SYSTEM_PROMPT = (

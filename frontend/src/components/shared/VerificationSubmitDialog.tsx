@@ -160,7 +160,7 @@ export function VerificationSubmitDialog({ itemKind, itemId, itemTitle, onClose,
                   type="text"
                   value={submitterOrg}
                   onChange={e => setSubmitterOrg(e.target.value)}
-                  placeholder="e.g. University of Idaho"
+                  placeholder="e.g. Tennessee Tech"
                   style={inputStyle}
                 />
               </div>

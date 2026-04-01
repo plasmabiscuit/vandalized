@@ -1,4 +1,4 @@
-"""Vandal Workflow Architect certification endpoints."""
+"""Awesome.ai Architect Workflow Certification endpoints."""
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel

@@ -79,10 +79,10 @@ export function CelebrationOverlay({
               <Award size={48} className="text-white" />
             </div>
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
-              University of Idaho
+              Tennessee Tech
             </p>
             <h2 className="text-2xl font-bold text-gray-900 mb-1 title-shimmer">
-              Vandal Workflow Architect
+              Authorized Awesome.ai Architect
             </h2>
             <p className="text-sm font-semibold mb-3" style={{ color: 'var(--highlight-color)' }}>
               Certified Professional

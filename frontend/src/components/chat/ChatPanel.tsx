@@ -12,7 +12,7 @@ import { getUserConfig, updateUserConfig } from '../../api/config'
 import type { FileAttachment, UrlAttachment } from '../../types/chat'
 
 const LOADING_WORDS = [
-  'Thinking', 'Vandalizing', 'Pondering', 'Analyzing',
+  'Thinking', 'Awesomizing', 'Pondering', 'Analyzing',
   'Processing', 'Brewing', 'Crunching', 'Conjuring',
 ]
 
@@ -313,7 +313,7 @@ export function ChatPanel({ conversationToLoad, pendingMessage, onPendingMessage
                   ) : activeKBUuid ? (
                     <BookOpen className="h-7 w-7 opacity-90" />
                   ) : (
-                    <img src="/images/joevandal.png" alt="Joe Vandal" style={{ width: 22, height: 35 }} className="opacity-90" />
+                    <img src="/images/joevandal.png" alt="Awesome Eagle" style={{ width: 22, height: 35 }} className="opacity-90" />
                   )}
                 </div>
                 <div>

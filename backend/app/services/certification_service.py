@@ -1,4 +1,4 @@
-"""Service layer for the Vandal Workflow Architect certification system."""
+"""Service layer for the Awesome.ai Architect Workflow Certification system."""
 
 import base64
 import datetime

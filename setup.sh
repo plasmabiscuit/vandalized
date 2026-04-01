@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  Vandalizer — Interactive Setup Wizard
+#  Awesome.ai — Interactive Setup Wizard
 #  AI-powered document intelligence for research administration
 #
 #  Run from the project root:
@@ -324,7 +324,7 @@ configure_env() {
     prompt "SMTP username" "" SMTP_USER
     prompt "SMTP password" "" SMTP_PASSWORD true
     prompt "From email" "" SMTP_FROM
-    prompt "From name" "Vandalizer" SMTP_FROM_NAME
+    prompt "From name" "Awesome.ai" SMTP_FROM_NAME
 
     sed -i.bak "s|^SMTP_HOST=.*|SMTP_HOST=${SMTP_HOST}|" "$ENV_FILE" && rm -f "${ENV_FILE}.bak"
     sed -i.bak "s|^SMTP_PORT=.*|SMTP_PORT=${SMTP_PORT}|" "$ENV_FILE" && rm -f "${ENV_FILE}.bak"

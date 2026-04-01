@@ -40,7 +40,7 @@ def validate_export_data(data: dict) -> str | None:
     if not isinstance(data, dict):
         return "Invalid JSON: expected an object"
     if not data.get("vandalizer_export"):
-        return "Not a Vandalizer export file (missing vandalizer_export flag)"
+        return "Not an Awesome.ai export file (missing vandalizer_export flag)"
     if data.get("schema_version") not in (1, SCHEMA_VERSION):
         return f"Unsupported schema version (expected 1 or {SCHEMA_VERSION})"
     if data.get("export_type") not in ("workflow", "search_set", "knowledge_base", "catalog"):

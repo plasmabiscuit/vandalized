@@ -251,7 +251,7 @@ export function ActivityRail() {
       <div className="border-t border-[#ddd] p-2 shrink-0 flex justify-center">
         <div
           onClick={togglePanel}
-          title={certCertified ? 'Vandal Workflow Architect' : certStarted ? `${certConfig.label} · ${certXp} XP` : 'Get Certified'}
+          title={certCertified ? 'Authorized Awesome.ai Architect' : certStarted ? `${certConfig.label} · ${certXp} XP` : 'Get Certified'}
           className="flex items-center gap-2 cursor-pointer transition-all hover:shadow-md active:scale-95"
           style={{
             borderRadius: 'var(--ui-radius, 12px)',
@@ -268,7 +268,7 @@ export function ActivityRail() {
           {!railDocked && (
             certCertified ? (
               <span className="text-[11px] font-semibold text-yellow-400 title-shimmer">
-                Vandal Workflow Architect
+                Authorized Awesome.ai Architect
               </span>
             ) : certStarted ? (
               <>

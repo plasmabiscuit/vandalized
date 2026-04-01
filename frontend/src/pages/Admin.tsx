@@ -4207,9 +4207,9 @@ function ImportDialog({ onClose, onImported }: { onClose: () => void; onImported
               </p>
               <div className="bg-gray-50 rounded-lg p-3 mb-4 font-mono text-xs text-gray-700">
                 name,parent<br/>
-                University of Idaho,<br/>
-                College of Engineering,University of Idaho<br/>
-                College of Science,University of Idaho<br/>
+                Tennessee Tech,<br/>
+                College of Engineering,Tennessee Tech<br/>
+                College of Science,Tennessee Tech<br/>
                 Department of Computer Science,College of Engineering<br/>
                 Department of Physics,College of Science
               </div>

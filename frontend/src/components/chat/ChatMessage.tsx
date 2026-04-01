@@ -6,7 +6,7 @@ import { submitChatFeedback } from '../../api/feedback'
 import type { ChatMessage as ChatMessageType } from '../../types/chat'
 
 const THINKING_WORDS = [
-  'Thinking', 'Vandalizing', 'Pondering', 'Analyzing',
+  'Thinking', 'Awesomizing', 'Pondering', 'Analyzing',
   'Processing', 'Brewing', 'Crunching', 'Conjuring',
 ]
 

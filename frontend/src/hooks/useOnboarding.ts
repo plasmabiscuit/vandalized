@@ -42,7 +42,7 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
   return copy
 }
 
-const CERTIFICATION_PILL = 'How do I get certified as a Vandal Workflow Architect?'
+const CERTIFICATION_PILL = 'How do I get certified as an Authorized Awesome.ai Architect?'
 
 function applyStatus(s: OnboardingStatus) {
   const now = new Date()
