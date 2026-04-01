@@ -410,8 +410,9 @@ CONFIG_ENCRYPTION_KEY=
 
 # M365 Integration (Graph API) — only needed if using Microsoft 365 intake
 GRAPH_TOKEN_KEY=                                            # Fernet key for Graph API tokens
-GRAPH_NOTIFICATION_URL=https://awesomeai.tntech.edu/office/webhooks/graph
-GRAPH_CLIENT_STATE_SECRET=<generate-random-secret>
+# Webhook endpoint exposed by the backend (see backend/app/main.py and Graph webhook router)
+GRAPH_NOTIFICATION_URL=https://awesomeai.tntech.edu/api/webhooks/graph
+# Note: clientState is generated/validated by the backend; no separate GRAPH_CLIENT_STATE_SECRET is required.
 VANDALIZER_BASE_URL=https://awesomeai.tntech.edu
 ```
 
