@@ -4209,9 +4209,9 @@ function ImportDialog({ onClose, onImported }: { onClose: () => void; onImported
                 name,parent<br/>
                 Tennessee Tech,<br/>
                 College of Engineering,Tennessee Tech<br/>
-                College of Science,Tennessee Tech<br/>
+                College of Arts and Sciences,Tennessee Tech<br/>
                 Department of Computer Science,College of Engineering<br/>
-                Department of Physics,College of Science
+                Department of Physics,College of Arts and Sciences
               </div>
               <p className="text-xs text-gray-500 mb-3">
                 The <strong>name</strong> column is required. The <strong>parent</strong> column references the parent node by name. Rows without a parent become root nodes. Types (university, college, department, unit) are auto-detected based on depth.
@@ -4382,7 +4382,7 @@ function OrganizationsTab() {
             <div className="flex-1">
               <input type="text" value={formName} onChange={e => setFormName(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && (editOrg ? handleUpdate() : handleCreate())}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" placeholder="e.g., College of Science" autoFocus />
+                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm" placeholder="e.g., College of Arts and Sciences" autoFocus />
             </div>
             {!editOrg && (
               <select value={formType} onChange={e => setFormType(e.target.value)}
