@@ -17,10 +17,10 @@ export function CertifiedBanner() {
           <Award size={32} className="text-yellow-400" />
           <div>
             <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-0.5">
-              University of Idaho &middot; Certified
+              Tennessee Tech &middot; Certified
             </p>
             <h2 className="text-2xl font-bold text-white title-shimmer">
-              Vandal Workflow Architect
+              Authorized Awesome.ai Architect
             </h2>
           </div>
           <Award size={32} className="text-yellow-400" />

@@ -411,7 +411,7 @@ def save_results_to_onedrive_channel(
 
     client = GraphClient(user_id)
     drive_id = onedrive_config.get("drive_id")
-    base_path = onedrive_config.get("base_path", "/Vandalizer/Results")
+    base_path = onedrive_config.get("base_path", "/Awesome.ai/Results")
 
     # Create case folder
     result_id = str(result_doc.get("_id", ""))[:8]

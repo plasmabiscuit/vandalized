@@ -248,7 +248,7 @@ async def chat_stream(
         )
         system_prompt = DOCUMENT_CHAT_SYSTEM_PROMPT
     elif include_onboarding_context:
-        # Inject Vandalizer help context only when explicitly requested
+        # Inject Awesome.ai help context only when explicitly requested
         # (triggered by the placeholder pills in the chat UI).
         prompt = (
             "--- BEGIN ONBOARDING CONTEXT ---\n"

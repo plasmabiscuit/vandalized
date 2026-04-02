@@ -34,7 +34,7 @@ export const MODULES: ModuleDefinition[] = [
     number: 0,
     title: 'AI Literacy',
     subtitle: 'Understanding AI for Research Administration',
-    description: 'Welcome to the Vandal Workflow Architect certification. By the end of this program, you\'ll earn an official VWA credential recognizing your ability to design and deploy AI-powered workflows for research administration. This first module builds your foundation — what AI actually is, what it\'s good and bad at, and how it applies to your work. No technical skills required yet.',
+    description: 'Welcome to the Awesome.ai Architect Workflow Certification. By the end of this program, you\'ll earn an official credential recognizing your ability to design and deploy AI-powered workflows for research administration. This first module builds your foundation — what AI actually is, what it\'s good and bad at, and how it applies to your work. No technical skills required yet.',
     objectives: [
       'Understand what an LLM is and how it generates text',
       'Learn the key terms you\'ll encounter throughout this certification',
@@ -62,7 +62,11 @@ export const MODULES: ModuleDefinition[] = [
           ],
         },
       },
-
+      {
+        title: 'Key terms you will encounter',
+        content: 'LLM (Large Language Model) \u2014 The AI engine that processes text. Examples: GPT-4, Claude, Gemini. Think of it as a very sophisticated autocomplete that can follow complex instructions.\n\nPrompt \u2014 The instructions you give to an LLM. A good prompt is specific and provides context. "Extract the PI name" is a prompt. The quality of your prompt directly affects the quality of the output.\n\nHallucination \u2014 When an LLM generates information that sounds plausible but is factually wrong. This is the #1 risk in research administration. An LLM might confidently report a budget of $500,000 when the document says $50,000.\n\nStructured Output \u2014 Forcing the LLM to return data in a specific format (like JSON with defined fields) instead of free-form text. This is how Awesome.ai ensures consistent, machine-readable results.\n\nToken \u2014 The unit of text an LLM processes. Roughly 1 token = 3/4 of a word. Relevant because models have token limits that affect how much document text they can process at once.\n\nRAG (Retrieval-Augmented Generation) \u2014 A technique where the LLM is given relevant excerpts from your actual documents before generating a response. This grounds the output in real data rather than the LLM\'s training data.',
+        variant: 'key-terms',
+      },
       {
         title: 'What AI is genuinely good at',
         objective: 'After this lesson, you\'ll know which research admin tasks are best suited for AI automation.',
@@ -366,7 +370,7 @@ export const MODULES: ModuleDefinition[] = [
     number: 5,
     title: 'Multi-Step Workflows',
     subtitle: 'Chain Steps Together',
-    description: 'Build a multi-step pipeline using a sample subaward agreement between University of Idaho and Boise State. Extract parties and terms, analyze obligations, then format a compliance summary.',
+    description: 'Build a multi-step pipeline using a sample subaward agreement between Tennessee Tech and a partner institution. Extract parties and terms, analyze obligations, then format a compliance summary.',
     objectives: [
       'Add the sample subaward agreement to your workspace',
       'Build a 3-step workflow: Extraction + Prompt + Formatter',
@@ -696,7 +700,7 @@ export const MODULES: ModuleDefinition[] = [
     number: 10,
     title: 'Collaboration & Governance',
     subtitle: 'Share and Standardize',
-    description: 'The final module before your Vandal Workflow Architect certification. Demonstrate that you can organize, verify, and share production-ready workflows across your team. Complete this and you earn your VWA credential.',
+    description: 'The final module before your Awesome.ai Architect Workflow Certification. Demonstrate that you can organize, verify, and share production-ready workflows across your team. Complete this and you earn your credential.',
     objectives: [
       'Mark a workflow as verified in the workflow settings',
       'Use workflows across personal and team contexts',
@@ -741,7 +745,7 @@ export const MODULES: ModuleDefinition[] = [
       },
       {
         title: 'Building a culture of reuse',
-        content: 'The highest-performing teams maintain a library of verified workflows that cover common document types, then adapt and extend them as needed.\n\nBy completing this module, you\'ve demonstrated every skill in the Vandal Workflow Architect program: understanding AI, decomposing processes, designing pipelines, building extractions, chaining multi-step workflows, using advanced nodes, producing deliverables, validating quality, processing at scale, and governing shared workflows.\n\nYou\'re now a certified VWA \u2014 the person on your team who knows how to turn any document-heavy process into a reliable, AI-powered pipeline. That\'s a rare and valuable skill.',
+        content: 'The highest-performing teams maintain a library of verified workflows that cover common document types, then adapt and extend them as needed.\n\nBy completing this module, you\'ve demonstrated every skill in the Awesome.ai Architect Workflow Certification program: understanding AI, decomposing processes, designing pipelines, building extractions, chaining multi-step workflows, using advanced nodes, producing deliverables, validating quality, processing at scale, and governing shared workflows.\n\nYou\'re now an Authorized Awesome.ai Architect \u2014 the person on your team who knows how to turn any document-heavy process into a reliable, AI-powered pipeline. That\'s a rare and valuable skill.',
         variant: 'insight',
         knowledgeCheck: {
           question: 'A colleague asks how to verify that budget totals are correct in a workflow. What\'s the right approach?',
@@ -1121,7 +1125,7 @@ export default function Certification() {
             {/* Stats */}
             <div className="flex-1 w-full">
               <h1 className="text-2xl font-bold text-gray-900 mb-1">
-                Vandal Workflow Architect
+                Awesome.ai Architect Workflow Certification
               </h1>
               <p className="text-sm text-gray-500 mb-2">
                 Complete all 11 modules to earn your official certification
@@ -1132,7 +1136,7 @@ export default function Certification() {
               >
                 <Award size={16} className="text-yellow-600 shrink-0" />
                 <p className="text-xs text-yellow-800">
-                  <span className="font-bold">Vandal Workflow Architect (VWA)</span> — a University of Idaho credential recognizing your ability to design, build, and deploy AI-powered document workflows for research administration.
+                  <span className="font-bold">Authorized Awesome.ai Architect</span> — a Tennessee Tech credential recognizing your ability to design, build, and deploy AI-powered document workflows for research administration.
                 </p>
               </div>
 

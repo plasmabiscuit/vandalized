@@ -437,7 +437,7 @@ export default function Demo() {
               required
               value={organization}
               onChange={(e) => setOrganization(e.target.value)}
-              placeholder="e.g., University of Idaho"
+              placeholder="e.g., Tennessee Tech"
               className={INPUT_CLASS}
             />
           </div>

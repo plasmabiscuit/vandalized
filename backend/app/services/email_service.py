@@ -64,64 +64,64 @@ _BASE_STYLE = """
 
 def waitlist_confirmation_email(name: str, position: int, frontend_url: str, status_uuid: str) -> tuple[str, str]:
     """Returns (subject, html_body) for waitlist confirmation."""
-    subject = "You're on the Vandalizer Demo Waitlist!"
+    subject = "You're on the Awesome.ai Demo Waitlist!"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Welcome to the waitlist, {name}!</h1>
       <p>Your demo application has been received. You are currently at position <span class="highlight">#{position}</span> on the waitlist.</p>
       <p>Your application ID is: <span class="highlight">{status_uuid}</span></p>
       <p>We activate new accounts regularly. When a spot opens up, you'll receive an email with your login credentials and full access to the platform for 2 weeks.</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/demo/status/{status_uuid}">Check Your Status</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
 
 def activation_email(name: str, user_id: str, password: str, expires_at: str, frontend_url: str) -> tuple[str, str]:
     """Returns (subject, html_body) for demo account activation."""
-    subject = "Your Vandalizer Demo Account is Ready!"
+    subject = "Your Awesome.ai Demo Account is Ready!"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Your demo account is active!</h1>
-      <p>Hi {name}, great news &mdash; your Vandalizer demo account is ready to go. You have <span class="highlight">2 weeks</span> of full platform access.</p>
+      <p>Hi {name}, great news &mdash; your Awesome.ai demo account is ready to go. You have <span class="highlight">2 weeks</span> of full platform access.</p>
       <p><strong style="color:#fff">Username:</strong> {user_id}<br/>
          <strong style="color:#fff">Password:</strong> {password}</p>
       <p>Your trial expires on <span class="highlight">{expires_at}</span>.</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/login">Sign In Now</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
 
 def expiry_warning_email(name: str, days_left: int, expires_at: str, frontend_url: str) -> tuple[str, str]:
     """Returns (subject, html_body) for trial expiry warning."""
-    subject = f"Your Vandalizer demo expires in {days_left} day{'s' if days_left != 1 else ''}"
+    subject = f"Your Awesome.ai demo expires in {days_left} day{'s' if days_left != 1 else ''}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Your demo is expiring soon</h1>
-      <p>Hi {name}, your Vandalizer demo trial expires on <span class="highlight">{expires_at}</span> ({days_left} day{'s' if days_left != 1 else ''} remaining).</p>
+      <p>Hi {name}, your Awesome.ai demo trial expires on <span class="highlight">{expires_at}</span> ({days_left} day{'s' if days_left != 1 else ''} remaining).</p>
       <p>Make sure to explore any features you haven't tried yet! After expiry, your account will be locked and you'll be asked to complete a short feedback questionnaire.</p>
-      <p style="margin-top:24px"><a class="btn" href="{frontend_url}/landing">Go to Vandalizer</a></p>
-      <div class="footer">Vandalizer</div>
+      <p style="margin-top:24px"><a class="btn" href="{frontend_url}/landing">Go to Awesome.ai</a></p>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
 
 def trial_expired_email(name: str, feedback_url: str) -> tuple[str, str]:
     """Returns (subject, html_body) for trial expired notification."""
-    subject = "Your Vandalizer Demo Has Ended"
+    subject = "Your Awesome.ai Demo Has Ended"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
-      <h1>Thank you for trying Vandalizer!</h1>
+      <div class="logo">Awesome.ai</div>
+      <h1>Thank you for trying Awesome.ai!</h1>
       <p>Hi {name}, your 2-week demo trial has ended. We hope you found the platform valuable.</p>
       <p>We'd love to hear about your experience. Please take a few minutes to fill out our feedback questionnaire:</p>
       <p style="margin-top:24px"><a class="btn" href="{feedback_url}">Share Your Feedback</a></p>
-      <p>Your feedback helps us improve Vandalizer for future users and researchers.</p>
-      <div class="footer">Vandalizer</div>
+      <p>Your feedback helps us improve Awesome.ai for future users and researchers.</p>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -135,15 +135,15 @@ def password_reset_email(
     name: str, reset_url: str,
 ) -> tuple[str, str]:
     """Returns (subject, html_body) for a password reset request."""
-    subject = "Reset your Vandalizer password"
+    subject = "Reset your Awesome.ai password"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Password Reset</h1>
       <p>Hi {name}, we received a request to reset your password. Click the button below to choose a new one.</p>
       <p style="margin-top:24px"><a class="btn" href="{reset_url}">Reset Password</a></p>
       <p style="font-size:13px;color:#6b7280;margin-top:16px">This link expires in 1 hour. If you didn't request this, you can safely ignore this email.</p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -157,17 +157,17 @@ def team_invite_email(
     inviter_name: str, team_name: str, role: str, accept_url: str,
 ) -> tuple[str, str]:
     """Returns (subject, html_body) for a team invitation."""
-    subject = f"You've been invited to join {team_name} on Vandalizer"
+    subject = f"You've been invited to join {team_name} on Awesome.ai"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>You're invited!</h1>
       <p><span class="highlight">{inviter_name}</span> has invited you to join
          <span class="highlight">{team_name}</span> as a <strong style="color:#fff">{role}</strong>.</p>
       <p>Click the button below to accept and start collaborating.</p>
       <p style="margin-top:24px"><a class="btn" href="{accept_url}">Accept Invitation</a></p>
       <p style="font-size:13px;color:#6b7280">This invitation expires in 30 days.</p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -204,13 +204,13 @@ def verification_status_email(
 
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>{label}: {item_name}</h1>
       <p>Hi {submitter_name}, your verification submission for <span class="highlight">{item_name}</span> has been updated.</p>
       <p>{body_text}</p>
       {notes_block}
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/library?tab=verification">View Details</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -227,14 +227,14 @@ def support_reply_email(
     subject = f"Re: {ticket_subject}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer Support</div>
+      <div class="logo">Awesome.ai Support</div>
       <h1>New reply on your ticket</h1>
       <p>Hi {user_name}, there's a new reply on your support ticket <span class="highlight">{ticket_subject}</span>.</p>
       <div style="margin:16px 0;padding:12px 16px;background:rgba(255,255,255,0.05);border-left:3px solid #f1b300;border-radius:4px;">
         <p style="margin:0;font-size:14px;color:#d1d5db;">{message[:500]}</p>
       </div>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/support?ticket={ticket_uuid}">View Ticket</a></p>
-      <div class="footer">Vandalizer Support System</div>
+      <div class="footer">Awesome.ai Support System</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -246,11 +246,11 @@ def support_status_email(
     subject = f"Ticket {new_status}: {ticket_subject}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer Support</div>
+      <div class="logo">Awesome.ai Support</div>
       <h1>Ticket {new_status}</h1>
       <p>Hi {user_name}, your support ticket <span class="highlight">{ticket_subject}</span> has been marked as <strong style="color:#fff">{new_status}</strong>.</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/support?ticket={ticket_uuid}">View Ticket</a></p>
-      <div class="footer">Vandalizer Support System</div>
+      <div class="footer">Awesome.ai Support System</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -263,14 +263,14 @@ def support_new_message_email(
     subject = f"New message on ticket: {ticket_subject}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer Support</div>
+      <div class="logo">Awesome.ai Support</div>
       <h1>New message on ticket</h1>
       <p>Hi {support_name}, <span class="highlight">{ticket_user}</span> replied on ticket <strong style="color:#fff">{ticket_subject}</strong>.</p>
       <div style="margin:16px 0;padding:12px 16px;background:rgba(255,255,255,0.05);border-left:3px solid #f1b300;border-radius:4px;">
         <p style="margin:0;font-size:14px;color:#d1d5db;">{message[:500]}</p>
       </div>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/support?ticket={ticket_uuid}">View Ticket</a></p>
-      <div class="footer">Vandalizer Support System</div>
+      <div class="footer">Awesome.ai Support System</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -294,12 +294,12 @@ def approval_request_email(
       </div>"""
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Approval Required</h1>
       <p>Hi {reviewer_name}, the workflow <span class="highlight">{workflow_name}</span> is paused at step <strong style="color:#fff">{step_name}</strong> and needs your review.</p>
       {instructions_block}
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/approvals?id={approval_uuid}">Review Now</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -318,12 +318,12 @@ def approval_resolved_email(
       </div>"""
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Workflow {decision.title()}</h1>
       <p>Hi {owner_name}, your workflow <span class="highlight">{workflow_name}</span> has been <strong style="color:#fff">{decision}</strong> by {reviewer_name}.</p>
       {comments_block}
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/">View Workflow</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -340,11 +340,11 @@ def team_member_joined_email(
     subject = f"{member_name} joined {team_name}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>New team member!</h1>
       <p>Hi {inviter_name}, <span class="highlight">{member_name}</span> has accepted your invitation and joined <strong style="color:#fff">{team_name}</strong>.</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/teams">View Team</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -361,12 +361,12 @@ def quality_alert_email(
     subject = f"Quality alert: {item_name}"
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>Quality Alert</h1>
       <p>Hi {owner_name}, your verified {item_kind.replace('_', ' ')} <span class="highlight">{item_name}</span> needs attention.</p>
       <p>{message}</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/library?tab=verification">View Details</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -381,7 +381,7 @@ def onboarding_drip_email(
 ) -> tuple[str, str]:
     """Returns (subject, html_body) for an onboarding drip email."""
     subjects = {
-        1: "Welcome to Vandalizer — start your certification journey",
+        1: "Welcome to Awesome.ai — start your certification journey",
         2: f"Ready for hands-on? {module_title} is next",
         3: f"Keep building — {module_title} awaits",
         4: "You're making great progress — keep going!",
@@ -390,12 +390,12 @@ def onboarding_drip_email(
 
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>{module_title}</h1>
       <p>Hi {name}, {module_description}</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/certification">Open Certification</a></p>
-      <p style="font-size:13px;color:#6b7280;margin-top:16px">Complete modules to earn XP and work toward your Vandal Workflow Architect certification.</p>
-      <div class="footer">Vandalizer</div>
+      <p style="font-size:13px;color:#6b7280;margin-top:16px">Complete modules to earn XP and work toward your Awesome.ai Architect Workflow Certification.</p>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html
 
@@ -416,12 +416,12 @@ def inactivity_nudge_email(
 
     html = f"""<!DOCTYPE html><html><head>{_BASE_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer</div>
+      <div class="logo">Awesome.ai</div>
       <h1>New in the catalog</h1>
       <p>Hi {name}, it's been {days_inactive} days since your last visit. Here's what's new:</p>
       <ul style="padding-left:20px;margin:16px 0">{items_html}</ul>
       <p>These verified extractions and knowledge bases are ready to use in your workflows.</p>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/library?tab=catalog">Browse Catalog</a></p>
-      <div class="footer">Vandalizer</div>
+      <div class="footer">Awesome.ai</div>
     </div></div></body></html>"""
     return subject, html

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  Vandalizer — Deployment Status Check
+#  Awesome.ai — Deployment Status Check
 #  Run from the project root: ./status.sh
 # ============================================================================
 
@@ -74,7 +74,7 @@ detail() {
 # ---------------------------------------------------------------------------
 echo ""
 echo -e "  ${BOLD}${MAGENTA}╔══════════════════════════════════════════╗${RESET}"
-echo -e "  ${BOLD}${MAGENTA}║${RESET}  ${BOLD}Vandalizer${RESET} ${DIM}Deployment Status${RESET}           ${BOLD}${MAGENTA}║${RESET}"
+echo -e "  ${BOLD}${MAGENTA}║${RESET}  ${BOLD}Awesome.ai${RESET} ${DIM}Deployment Status${RESET}           ${BOLD}${MAGENTA}║${RESET}"
 echo -e "  ${BOLD}${MAGENTA}╚══════════════════════════════════════════╝${RESET}"
 
 # ---------------------------------------------------------------------------

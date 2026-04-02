@@ -11,7 +11,7 @@ from app.models.user import User
 logger = logging.getLogger(__name__)
 
 SYSTEM_USER_ID = "__vandalizer_team__"
-SYSTEM_USER_NAME = "Vandalizer Team"
+SYSTEM_USER_NAME = "Awesome.ai Team"
 
 # Trial duration matches demo_service.TRIAL_DAYS
 TRIAL_DAYS = 14
@@ -268,7 +268,7 @@ DEFAULT_PROMPTS = [
         "stage": "early",
         "subject": "Welcome Check-in",
         "question_text": (
-            "Welcome to Vandalizer! We're glad you're here. "
+            "Welcome to Awesome.ai! We're glad you're here. "
             "What's the first task or problem you're hoping to solve with this tool? "
             "Understanding your goals will help us support you better."
         ),
@@ -341,7 +341,7 @@ DEFAULT_PROMPTS = [
         "subject": "Mid-Trial Check-in",
         "question_text": (
             "You're about halfway through your trial. How's it going so far? "
-            "Is there a feature you wish Vandalizer had, or something you "
+            "Is there a feature you wish Awesome.ai had, or something you "
             "expected that isn't here?"
         ),
         "trigger_rules": TriggerRules(min_trial_day=6, max_trial_day=9, cooldown_hours=72),
@@ -352,7 +352,7 @@ DEFAULT_PROMPTS = [
         "stage": "late",
         "subject": "Value Assessment",
         "question_text": (
-            "Your trial wraps up soon. Has Vandalizer helped you accomplish "
+            "Your trial wraps up soon. Has Awesome.ai helped you accomplish "
             "what you set out to do? If you could keep using it, how would "
             "it fit into your regular work?"
         ),
@@ -365,7 +365,7 @@ DEFAULT_PROMPTS = [
         "subject": "Recommendation",
         "question_text": (
             "One last question: On a scale from 1\u201310, how likely would you "
-            "be to recommend Vandalizer to a colleague? What's the main reason "
+            "be to recommend Awesome.ai to a colleague? What's the main reason "
             "for your score?"
         ),
         "trigger_rules": TriggerRules(min_trial_day=12, max_trial_day=14, cooldown_hours=48),

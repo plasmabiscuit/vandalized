@@ -218,9 +218,9 @@ export function WelcomeActionCards({
         <ActionCard
           icon={<Compass size={18} />}
           title="Take a quick tour"
-          description="See everything Vandalizer can do for your research"
+          description="See everything Awesome.ai can do for your research"
           onClick={() => onSendMessage(
-            'Give me a quick tour of what Vandalizer can do. What should I try first?',
+            'Give me a quick tour of what Awesome.ai can do. What should I try first?',
             true,
           )}
         />

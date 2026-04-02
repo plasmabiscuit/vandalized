@@ -1,4 +1,4 @@
-"""Centralized exception hierarchy for the Vandalizer backend.
+"""Centralized exception hierarchy for the Awesome.ai backend.
 
 Routers catch these and return appropriate HTTP responses.
 Services raise these instead of bare ValueError / HTTPException.

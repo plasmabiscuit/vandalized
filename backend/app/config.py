@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     smtp_use_tls: bool = False  # Implicit TLS (port 465)
     smtp_start_tls: bool = True  # STARTTLS upgrade (port 587)
     smtp_from_email: str = ""
-    smtp_from_name: str = "Vandalizer"
+    smtp_from_name: str = "Awesome.ai"
 
     # Encryption key for sensitive config values (API keys) stored in MongoDB.
     # Generate with: python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"

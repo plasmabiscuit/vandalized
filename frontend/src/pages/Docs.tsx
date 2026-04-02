@@ -533,8 +533,8 @@ function About() {
       <h2 className="text-3xl font-bold text-white">About & Funding</h2>
 
       <p className="text-gray-300 text-lg leading-relaxed">
-        Vandalizer is an open-source AI-powered document intelligence platform for research
-        administration, originally developed at the University of Idaho as part of the{' '}
+        Awesome.ai is an open-source AI-powered document intelligence platform for research
+        administration, originally developed at Tennessee Tech as part of the{' '}
         <a
           href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2427549"
           target="_blank"

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create an initial admin account for a fresh Vandalizer deployment.
+"""Create an initial admin account for a fresh Awesome.ai deployment.
 
 Idempotent: safe to run multiple times. If the admin user already exists,
 it ensures the is_admin and is_examiner flags are set.

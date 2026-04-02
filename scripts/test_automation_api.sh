@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  Vandalizer — Automation API Trigger
+#  Awesome.ai — Automation API Trigger
 #  Simple wizard: pick an automation, provide input, run it.
 #
 #  Usage:
@@ -77,7 +77,7 @@ fail() { echo -e "\n  ${RED}✗  $1${RESET}\n"; exit 1; }
 # Step 1: Connect & authenticate
 # ---------------------------------------------------------------------------
 echo ""
-echo -e "  ${ORANGE}${BOLD}Vandalizer${RESET}  ${DIM}— Automation Trigger${RESET}"
+echo -e "  ${ORANGE}${BOLD}Awesome.ai${RESET}  ${DIM}— Automation Trigger${RESET}"
 echo -e "  ${DIM}$(printf '%.0s─' $(seq 1 44))${RESET}"
 echo ""
 
@@ -155,7 +155,7 @@ echo -e "${GREEN}ok${RESET}"
 AUTO_COUNT=$(echo "$LAST_RESPONSE" | python3 -c "import sys,json; print(len(json.load(sys.stdin)))" 2>/dev/null || echo "0")
 
 if [[ "$AUTO_COUNT" == "0" ]]; then
-  fail "No automations found. Create one in the Vandalizer UI first."
+  fail "No automations found. Create one in the Awesome.ai UI first."
 fi
 
 # Filter to API-triggered automations only

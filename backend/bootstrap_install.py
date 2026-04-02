@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bootstrap a fresh Vandalizer deployment for self-hosted operators.
+"""Bootstrap a fresh Awesome.ai deployment for self-hosted operators.
 
 This is the canonical first-run path for Docker Compose installs:
 1. Create or update the initial admin account.

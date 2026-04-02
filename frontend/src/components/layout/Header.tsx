@@ -69,8 +69,8 @@ export function Header() {
         {/* Left: Logo images */}
         <div className="flex items-center">
           <button onClick={handleLogoClick} aria-label="Go to home page" className="flex items-center" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-            <img src="/images/joevandal.png" alt="" style={{ width: 25, height: 40, marginTop: 4 }} />
-            <img src="/images/Vandalizer_Wordmark_RGB.png" alt="Vandalizer" style={{ width: 200, height: 50, marginLeft: 4 }} />
+            <img src="/images/joevandal.png" alt="Awesome Eagle" style={{ width: 25, height: 40, marginTop: 4 }} />
+            <img src="/images/Vandalizer_Wordmark_RGB.png" alt="Awesome.ai" style={{ width: 200, height: 50, marginLeft: 4 }} />
           </button>
         </div>
 

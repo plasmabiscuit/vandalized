@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Reset the Vandalizer development database, uploaded files, and ChromaDB.
+# Reset the Awesome.ai development database, uploaded files, and ChromaDB.
 #
 # Usage:
 #   ./scripts/reset_db.sh          # interactive (asks for confirmation)

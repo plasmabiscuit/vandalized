@@ -62,7 +62,7 @@
     "expected_fields": ["PI Name", "Institution", "Total Budget", "Project Period", "Sponsoring Agency"],
     "expected_values": {
       "PI Name": ["Sarah Chen", "Dr. Sarah Chen"],
-      "Institution": ["University of Idaho"],
+      "Institution": ["Tennessee Tech"],
       "Total Budget": ["$485,000", "485000", "485,000"],
       "Sponsoring Agency": ["NSF", "National Science Foundation"]
     },
@@ -92,7 +92,7 @@
     ],
     "expected_values": {
       "PI Name": ["James Park", "Dr. James Park"],
-      "Institution": ["University of Idaho"],
+      "Institution": ["Tennessee Tech"],
       "Grant Number": ["1R01NS123456-01"],
       "Total Budget": ["$1,250,000", "1250000", "1,250,000"],
       "Personnel Costs": ["$625,000", "625000", "625,000"],
@@ -121,7 +121,7 @@
       "PI Name", "Deliverables", "Reporting Schedule", "Compliance Requirements"
     ],
     "expected_values": {
-      "Prime Recipient": ["University of Idaho"],
+      "Prime Recipient": ["Tennessee Tech"],
       "Subrecipient": ["Boise State University"],
       "Subaward Amount": ["$185,000", "185000", "185,000"],
       "PI Name": ["Sarah Chen", "Dr. Sarah Chen"]

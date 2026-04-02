@@ -1,4 +1,4 @@
-"""Generate synthetic sample PDFs for the Vandal Workflow Architect certification.
+"""Generate synthetic sample PDFs for the Awesome.ai Architect Workflow Certification.
 
 Uses fpdf2 (pip install fpdf2)  -  zero system dependencies.
 Run:  python certification-data/generate_pdfs.py
@@ -76,7 +76,7 @@ def gen_nsf_proposal():
     pdf.field("Project Title", "Alpine Ecosystem Response to Climate Change in the Northern Rockies")
     pdf.field("Principal Investigator", "Dr. Sarah Chen")
     pdf.field("Co-PI", "Dr. Michael Torres")
-    pdf.field("Institution", "University of Idaho")
+    pdf.field("Institution", "Tennessee Tech")
     pdf.field("Department", "Department of Biological Sciences")
     pdf.field("Requested Amount", "$485,000")
     pdf.field("Project Period", "September 1, 2025 - August 31, 2028")
@@ -137,7 +137,7 @@ def gen_nih_r01():
     pdf.field("Project Title", "Neural Circuit Mechanisms of Working Memory in Prefrontal Cortex")
     pdf.field("Principal Investigator", "Dr. James Park")
     pdf.field("Degree", "Ph.D.")
-    pdf.field("Institution", "University of Idaho")
+    pdf.field("Institution", "Tennessee Tech")
     pdf.field("Department", "Department of Biological Sciences  -  Neuroscience Program")
     pdf.field("Total Budget", "$1,250,000")
     pdf.field("Project Period", "July 1, 2024 - June 30, 2029")
@@ -193,7 +193,7 @@ def gen_nih_r01():
     pdf.section("Vertebrate Animals")
     pdf.body(
         "All procedures will be performed in accordance with the NIH Guide for the Care and Use of Laboratory "
-        "Animals and approved by the University of Idaho IACUC (Protocol #2024-015). We will use approximately "
+        "Animals and approved by the Tennessee Tech IACUC (Protocol #2024-015). We will use approximately "
         "200 adult C57BL/6J mice (both sexes, 8-12 weeks old) over the project period. Mice will be housed in "
         "the university vivarium with standard 12h light/dark cycles and ad libitum food and water access."
     )
@@ -220,7 +220,7 @@ def gen_subaward():
     pdf.ln(4)
 
     pdf.section("Parties")
-    pdf.field("Prime Recipient (Pass-Through Entity)", "University of Idaho")
+    pdf.field("Prime Recipient (Pass-Through Entity)", "Tennessee Tech")
     pdf.field("Prime Recipient Address", "875 Perimeter Drive, Moscow, ID 83844")
     pdf.field("Prime PI", "Dr. Sarah Chen")
     pdf.field("Subrecipient", "Boise State University")
@@ -396,7 +396,7 @@ def gen_progress_report():
 
     pdf.field("Project Title", "Alpine Ecosystem Response to Climate Change in the Northern Rockies")
     pdf.field("Principal Investigator", "Dr. Sarah Chen")
-    pdf.field("Institution", "University of Idaho")
+    pdf.field("Institution", "Tennessee Tech")
     pdf.field("Reporting Period", "September 1, 2026 - August 31, 2027")
     pdf.field("Award Amount", "$485,000")
     pdf.field("Report Submission Date", "October 15, 2027")
@@ -481,7 +481,7 @@ def _gen_batch_proposal(filename: str, pi: str, dept: str, title: str, amount: s
     pdf.section("Project Information")
     pdf.field("Project Title", title)
     pdf.field("Principal Investigator", pi)
-    pdf.field("Institution", "University of Idaho")
+    pdf.field("Institution", "Tennessee Tech")
     pdf.field("Department", dept)
     pdf.field("Requested Amount", amount)
     pdf.field("Project Period", "January 1, 2026 - December 31, 2028")

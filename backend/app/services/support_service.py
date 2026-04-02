@@ -536,12 +536,12 @@ def _new_ticket_email(
 ) -> str:
     return f"""<!DOCTYPE html><html><head>{_STYLE}</head><body>
     <div class="container"><div class="card">
-      <div class="logo">Vandalizer Support</div>
+      <div class="logo">Awesome.ai Support</div>
       <h1>New Support Ticket</h1>
       <p>Hi {support_name}, a new support ticket has been created.</p>
       <p><strong style="color:#fff">From:</strong> {ticket_user}<br/>
          <strong style="color:#fff">Subject:</strong> <span class="highlight">{ticket_subject}</span></p>
       <div class="message-box"><p style="margin:0">{message[:500]}</p></div>
       <p style="margin-top:24px"><a class="btn" href="{frontend_url}/support?ticket={ticket_uuid}">View Ticket</a></p>
-      <div class="footer">Vandalizer Support System</div>
+      <div class="footer">Awesome.ai Support System</div>
     </div></div></body></html>"""

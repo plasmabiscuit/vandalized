@@ -70,7 +70,7 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting Vandalizer backend")
+    logger.info("Starting Awesome.ai backend")
     await init_db(get_settings())
 
     # Seed default feedback prompts for trial check-ins
@@ -78,11 +78,11 @@ async def lifespan(app: FastAPI):
     await seed_default_prompts()
 
     yield
-    logger.info("Shutting down Vandalizer backend")
+    logger.info("Shutting down Awesome.ai backend")
 
 
 app = FastAPI(
-    title="Vandalizer",
+    title="Awesome.ai",
     lifespan=lifespan,
     docs_url=None if _boot_settings.is_production else "/api/docs",
     redoc_url=None if _boot_settings.is_production else "/api/redoc",

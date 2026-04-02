@@ -6,7 +6,7 @@ from pydantic import Field
 
 
 class CertificationProgress(Document):
-    """Tracks a user's progress through the Vandal Workflow Architect certification."""
+    """Tracks a user's progress through the Awesome.ai Architect Workflow Certification."""
 
     user_id: str
     modules: dict = {}  # {module_id: {completed, stars, completed_at, attempts, xp_earned}}
